@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belaaribi Youssef – CV</title>
+  <style>
+    /* ===== Reset ===== */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #e5e5e5;
+      padding: 2rem;
+      -webkit-print-color-adjust: exact;
+    }
+
+    /* ===== Container ===== */
+    .resume {
+      width: 210mm;                /* A4 width */
+      min-height: 297mm;           /* A4 height */
+      margin: auto;
+      background: #fff;
+      display: grid;
+      grid-template-columns: 32% 68%;
+      box-shadow: 0 0 10px rgba(0,0,0,.15);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* ===== Left Sidebar ===== */
+    .sidebar {
+      background: #fff;            /* in original PDF sidebar is white */
+      color: #000;
+      padding: 2rem 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* Profile Photo */
+    .photo {
+      display: flex;
+      justify-content: start;
+    }
+    .photo img {
+      width: 100%;
+      max-width: 150px;
+      border: 4px solid #ffffff;   /* inner white border */
+      outline: 2px solid #bcbcbc;  /* subtle outer frame */
+      /* reproduce the bevel cut on top‑right & bottom‑right */
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18%), calc(100% - 18%) 100%, 0 100%);
+    }
+
+    /* ===== Right Content Area ===== */
+    .content {
+      background: #dfe8f4;         /* pastel blue like PDF */
+      padding: 2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* ===== Headings & Helpers ===== */
+    .section-title {
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-bottom: .75rem;
+      color: #111;
+      font-size: .9rem;
+    }
+
+    .sidebar ul { list-style: none; }
+    .sidebar li { margin-bottom: .35rem; font-size: .88rem; }
+
+    .name { font-size: 2.4rem; font-weight: 800; line-height: 1.2; color: #111; }
+    .dob  { font-size: 1rem;  margin-top: .3rem; }
+
+    .subsection { margin-bottom: 1.2rem; }
+
+    .entry      { margin-bottom: .75rem; }
+    .entry-title { font-weight: 600; font-size: 1rem; }
+    .entry-institution { font-style: italic; font-size: .9rem; margin: .2rem 0 .4rem; }
+    .entry ul { list-style: disc; margin-left: 1.2rem; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: .4rem .6rem; }
+    .tag  { background: #e0e0e0; padding: .2rem .5rem; border-radius: .25rem; font-size: .78rem; }
+
+    /* ===== Print adjustments ===== */
+    @media print {
+      body { background: none; padding: 0; }
+      .resume { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="resume">
+
+    <!-- ===== LEFT SIDEBAR ===== -->
+    <aside class="sidebar">
+
+      <!-- Profile Photo -->
+      <figure class="photo">
+        <!-- Replace `photo.jpg` with the actual relative/absolute path of the portrait image -->
+        <img src="photo.jpg" alt="Portrait de Youssef Belaaribi">
+      </figure>
+
+      <!-- Contact -->
+      <section>
+        <h2 class="section-title">Contact</h2>
+        <ul>
+          <li>📞 06 70 46 35 59</li>
+          <li>✉️ <a href="mailto:youssef.belaaribi2002@gmail.com">youssef.belaaribi2002@gmail.com</a></li>
+          <li>📍 Taroudant, Maroc</li>
+        </ul>
+      </section>
+
+      <!-- Profile Summary -->
+      <section>
+        <h2 class="section-title">Profil</h2>
+        <p style="font-size:.88rem; line-height:1.35;">
+          Titulaire d'une licence en éducation physique et sportive, je suis passionné par la pratique des sports collectifs comme le football et le volleyball, ainsi que des sports individuels tels que la natation et la musculation.
+        </p>
+      </section>
+
+      <!-- Languages -->
+      <section>
+        <h2 class="section-title">Langues</h2>
+        <ul>
+          <li>Arabe</li>
+          <li>Français</li>
+          <li>Anglais</li>
+        </ul>
+      </section>
+
+      <!-- Skills -->
+      <section>
+        <h2 class="section-title">Compétences</h2>
+        <ul>
+          <li>Capacité athlétique polyvalente</li>
+          <li>Travail en équipe</li>
+          <li>Créativité</li>
+          <li>Ouverture d’esprit</li>
+          <li>Ponctualité</li>
+          <li>Actif</li>
+          <li>Sens du relationnel</li>
+        </ul>
+      </section>
+
+      <!-- Interests -->
+      <section>
+        <h2 class="section-title">Centres d’intérêt</h2>
+        <div class="tags">
+          <span class="tag">Voyage</span>
+          <span class="tag">Natation</span>
+          <span class="tag">Football</span>
+          <span class="tag">Musculation</span>
+          <span class="tag">Alpinisme</span>
+          <span class="tag">Chasse</span>
+        </div>
+      </section>
+    </aside>
+
+    <!-- ===== RIGHT CONTENT ===== -->
+    <section class="content">
+
+      <!-- Header Name -->
+      <header>
+        <h1 class="name">Belaaribi Youssef</h1>
+        <p class="dob">Né le : 24/07/2002 à Taroudant</p>
+      </header>
+
+      <!-- FORMATION -->
+      <section class="subsection">
+        <h2 class="section-title">Formation</h2>
+
+        <div class="entry">
+          <h3 class="entry-title">Licence – Université Hassan I, Settat</h3>
+          <p class="entry-institution">Filière Éducation Physique et Sportive | 2021 – 2024 – Mention Assez Bien</p>
+          <ul>
+            <li>Institut des Sciences du Sport, Settat</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <h3 class="entry-title">Baccalauréat – Lycée qualifiant El Mansour Dahbi</h3>
+          <p class="entry-institution">Option SVT | Taroudant | 2020 – Mention Assez Bien</p>
+        </div>
+      </section>
+
+      <!-- EXPERIENCES PROFESSIONNELLES -->
+      <section class="subsection">
+        <h2 class="section-title">Expériences Professionnelles</h2>
+
+        <!-- Assistant de Direction -->
+        <div class="entry">
+          <h3 class="entry-title">Assistant de Direction Stagiaire</h3>
+          <p class="entry-institution">Collège Moulay Abdellah, Settat | 2021 – 2024</p>
+          <ul>
+            <li>Enregistrement des absences</li>
+            <li>Organisation de réunions et activation de la vie scolaire</li>
+            <li>Accueil, communication et gestion documentaire</li>
+            <li>Support administratif général</li>
+          </ul>
+        </div>
+
+        <!-- Professeur Stagiaire -->
+        <div class="entry">
+          <h3 class="entry-title">Professeur Stagiaire</h3>
+          <p class="entry-institution">2023 – 2024</p>
+          <ul>
+            <li><strong>Stage d’observation</strong> – 3<sup>e</sup> année (Semestre 5)
+              <ul>
+                <li>Gestion du matériel sportif</li>
+                <li>Participation à l’encadrement des élèves</li>
+                <li>Apprentissage des règles de sécurité</li>
+                <li>Observation de l’évaluation des élèves</li>
+              </ul>
+            </li>
+            <li><strong>Stage d’immersion</strong> – 3<sup>e</sup> année (Semestre 6)
+              <ul>
+                <li>Animation d’activités sportives</li>
+                <li>Participation à la préparation des cours</li>
+                <li>Gestion complète des cours d’EPS</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
